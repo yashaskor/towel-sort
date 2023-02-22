@@ -2,7 +2,10 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  let res = [];
+  if (matrix === [] || !matrix) {
+    return [""];
+  } else {
+    let res = [];
   for (let elem=0; elem<matrix.length;elem++) {  
       if (!(elem%2)) {
         res.push(matrix[elem])
@@ -14,4 +17,5 @@ module.exports = function towelSort (matrix) {
     return total.concat(amount);
   }, []);
   return towel;
+  }  
 }
